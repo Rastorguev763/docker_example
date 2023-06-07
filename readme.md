@@ -31,6 +31,7 @@ services:
       POSTGRES_USER: your_postgres_username
     volumes:
       - ./data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - 5432:5432
 ```
