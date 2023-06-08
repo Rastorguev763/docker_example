@@ -126,7 +126,7 @@ CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS      
 - команда для подключения к контейнеру с базой через командную строку и вызова psql
 
 ```bash
-docker exec -it my_db_container psql -U root -d root
+docker exec -it my_db_container psql -U postgres -d testdb
 ```
 
 - команда psql для добавления новых данных в базу
@@ -138,3 +138,5 @@ INSERT INTO public.index_mass (user_id, weight, height) VALUES (4, 80, 178);
 3. Нажмите на кнопку "Подключиться" или выполните соответствующую команду для подключения к базе данных.
 
 После успешного подключения вы сможете работать с базой данных PostgreSQL через выбранный вами инструмент для управления базами данных.
+
+Данный проект, собирает два `docker` контейнера, с `PostgreSQL` и `App`, в контейнере App выполняется код который взаимодействует с СУБД Postgres.
